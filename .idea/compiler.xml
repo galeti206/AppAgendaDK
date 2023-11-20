@@ -9,8 +9,5 @@
         <module name="appagendadk" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="appagendadk" target="11" />
-    </bytecodeTargetLevel>
   </component>
 </project>

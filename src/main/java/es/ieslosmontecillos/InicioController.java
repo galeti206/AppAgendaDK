@@ -5,6 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.InputEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
@@ -19,13 +20,15 @@ public class InicioController {
     private ObservableList olPers;
     private Pane rootMain = new Pane();
     @FXML
-    private Label Label;
+    private ImageView imagenMain;
+    @FXML
+    private Label label;
 
     public Pane getRootMain(){
         return rootMain;
     }
 
-/*
+
     @Deprecated
     public void iniciaApp(InputEvent event){
         try{
@@ -37,10 +40,14 @@ public class InicioController {
             agendaViewController.setOlProvincias(olProv);
             agendaViewController.setOlPersonas(olPers);
             agendaViewController.cargarTodasPersonas();
+
+            imagenMain.setVisible(false);
+            label.setVisible(false);
+
         } catch (IOException e) {
             System.out.println("IOException: " + e);
         }
-    }*/
+    }
     public void setRootMain(Pane rootMain) {
         this.rootMain = rootMain;
     }
@@ -54,7 +61,7 @@ public class InicioController {
         this.olPers = olPers;
     }
 
-    @FXML
-    public void iniciaApp(InputEvent event) {
-    }
+//    @FXML
+//    public void iniciaApp(InputEvent event) {
+//    }
 }
